@@ -15,7 +15,7 @@ from lib.pointers import run_hash_verification
 from lib.pointers import run_port_scan
 
 # Shell
-from lib.shell import pybelt_shell
+from lib.shell import kraken_shell
 
 # Settings
 from lib.core.settings import LOGGER
@@ -25,7 +25,7 @@ from lib.core.settings import CLONE_LINK
 from lib.core.settings import create_wordlist
 from lib.core.settings import hide_banner
 from lib.core.settings import integrity_check
-from lib.core.settings import update_pybelt
+from lib.core.settings import update_kraken
 from lib.core.settings import prompt
 from lib.core.settings import verify_py_version
 
@@ -94,8 +94,8 @@ if __name__ == '__main__':
     except HTTPError:
         check_fail = "Integrity check failed to connect "
         check_fail += "you are running a non verified "
-        check_fail += "Pybelt, this may or may not be insecure. "
-        check_fail += "Suggestion would be to re-download Pybelt from "
+        check_fail += "kraken, this may or may not be insecure. "
+        check_fail += "Suggestion would be to re-download kraken from "
         check_fail += "{}"
         LOGGER.error(check_fail.format(CLONE_LINK))
         answer = prompt("Would you like to continue anyways[y/N] ")
@@ -108,10 +108,10 @@ if __name__ == '__main__':
 
     try:
         if len(sys.argv) == 1:  # If you failed to provide an argument
-            prompt = pybelt_shell.PybeltConsole()  # Launch the shell
-            prompt.prompt = "{}@pybelt > ".format(getpass.getuser())
+            prompt = kraken_shell.krakenConsole()  # Launch the shell
+            prompt.prompt = "{}@kraken > ".format(getpass.getuser())
             info_message = "You have failed to provide a flag so you have been "
-            info_message += "redirected to the Pybelt Console. For available "
+            info_message += "redirected to the kraken Console. For available "
             info_message += "flags type: 'run -hh', to see help type: 'help' "
             info_message += "to exit the console type: 'quit'"
             try:
@@ -121,7 +121,7 @@ if __name__ == '__main__':
                 exit(0)
 
         if args.update is True:  # Update the program
-            update_pybelt()
+            update_kraken()
 
         if args.version is True:  # Show the version number and exit
             hide_banner(hide=True)
