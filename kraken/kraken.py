@@ -2,7 +2,8 @@ import argparse
 import random
 import sys
 import getpass
-from urllib2 import HTTPError
+import urllib.request as urllib2
+from urllib.error import HTTPError
 
 # Pointers
 from lib.pointers import run_proxy_finder
