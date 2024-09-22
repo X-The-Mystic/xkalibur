@@ -85,7 +85,7 @@ dd08715b7a3cb065388f16eb6510c5c8 *./.gitignore
 70d08de4a67a46ea226ed6f64622597f *./.idea/inspectionProfiles/profiles_settings.xml
 f3fc0528e775433dcc98271c1b8fcf77 *./.idea/misc.xml
 0d96b174fe4ad555d3bb789200665582 *./.idea/modules.xml
-781c9141aa772ef86e1a1107384784a0 *./.idea/pybelt.iml
+781c9141aa772ef86e1a1107384784a0 *./.idea/kraken.iml
 166acef3d301bd241d0d6da15bc5ad3c *./.idea/vcs.xml
 0da2196661659743780539eee549f9ff *./.idea/workspace.xml
 2c8d958743cb2fcf3829213bcc44cdc3 *./checksum.txt
@@ -134,8 +134,8 @@ d7094e7e44b840cca51664d58ffa8836 *./lib/core/__init__.py
 f2643b737534102528c38aa7ecdbc309 *./lib/core/__init__.pyc
 38c345a7a673392ff46bcf3b245efddc *./lib/pointers.py
 db311dc5efdf48824ddd0ffe3250b331 *./lib/pointers.pyc
-9e19e4b74b81a8779bdf1200adc085e5 *./lib/shell/pybelt_shell.py
-2f2a2644e6318685a7a88746b1583ec3 *./lib/shell/pybelt_shell.pyc
+9e19e4b74b81a8779bdf1200adc085e5 *./lib/shell/kraken_shell.py
+2f2a2644e6318685a7a88746b1583ec3 *./lib/shell/kraken_shell.pyc
 d41d8cd98f00b204e9800998ecf8427e *./lib/shell/__init__.py
 793ad693188fc57698bbd406d983f3c1 *./lib/shell/__init__.pyc
 8f418d13225a948a0db61fbb1b980f00 *./lib/text_files/agents.txt
@@ -144,6 +144,6 @@ e0f4b8a8ea2f522072c695c305834dcd *./lib/text_files/legal.txt
 8ffe3720df0a8aaa71015b6509f0c49d *./lib/text_files/wordlist.txt
 d41d8cd98f00b204e9800998ecf8427e *./lib/__init__.py
 60cedbb0d7f7993d35f19d0cae462a50 *./lib/__init__.pyc
-8f024aabbf9e517738335b2be9c72a98 *./pybelt.py
+8f024aabbf9e517738335b2be9c72a98 *./kraken.py
 9cfcb7742566be5efbe4c512c05974c1 *./README.md
 cec7b11d93bfe0297031a057f47f193a *./requirements.txt
