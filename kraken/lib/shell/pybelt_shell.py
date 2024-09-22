@@ -1,10 +1,10 @@
 from cmd import Cmd
 
 from lib.core.settings import TOOL_LIST
-from lib.core.settings import update_pybelt
+from lib.core.settings import update_kraken
 
 
-class PybeltConsole(Cmd):
+class krakenConsole(Cmd):
 
     """ Interactive shell that will launch if you fail to pass a flag """
 
@@ -86,7 +86,7 @@ class PybeltConsole(Cmd):
         elif command.lower() == "-hh" or command.lower().startswith("help"):
             self.help_menu()
         elif command.lower() == "-u" or command.lower().startswith("update"):
-            update_pybelt()
+            update_kraken()
         elif command.lower() == "-sl" or command.lower().startswith("sql list"):
             from lib.pointers import run_sqli_scan
             file_path = raw_input("Enter the full path to the SQLi file: ")
