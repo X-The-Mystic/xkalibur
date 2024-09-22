@@ -17,7 +17,7 @@ formatter = ColoredFormatter(logger_format, datefmt="%I:%M:%S")
 stream = logging.StreamHandler()
 stream.setLevel(log_level)
 stream.setFormatter(formatter)
-LOGGER = logging.getLogger('pybeltConfig')
+LOGGER = logging.getLogger('krakenConfig')
 LOGGER.setLevel(log_level)
 LOGGER.addHandler(stream)
 
@@ -54,8 +54,8 @@ SAYING = random.choice([
 
 # URLs to make the program work
 PROXY_URL = "http://proxy.tekbreak.com/100/json"
-CLONE_LINK = "https://github.com/ekultek/pybelt.git"
-MD5_CHECKSUM_URL = "https://raw.githubusercontent.com/Ekultek/Pybelt/master/docs/checksum.md5"
+CLONE_LINK = "https://github.com/ekultek/kraken.git"
+MD5_CHECKSUM_URL = "https://raw.githubusercontent.com/Ekultek/kraken/master/docs/checksum.md5"
 
 # Random common column names, and random user agents
 RANDOM_COMMON_COLUMN = random.choice(open("{}/lib/text_files/common_columns.txt".format(PATH)).readlines())
@@ -277,21 +277,21 @@ def hide_banner(hide=False, legal=False):
         return
 
 
-def update_pybelt():
+def update_kraken():
     """ Update the program """
     import subprocess
-    LOGGER.info("Updating pybelt..")
+    LOGGER.info("Updating kraken..")
     updater = subprocess.check_output(["git", "pull", "origin", "master"])
     if "Already up-to-date." in updater:
-        LOGGER.warn("Pybelt is even with origin master.")
+        LOGGER.warn("kraken is even with origin master.")
         exit(0)
     elif "error" or "Error" in updater:
-        error_message = "Unable to update Pybelt, an error occurred "
+        error_message = "Unable to update kraken, an error occurred "
         error_message += "the newest version can be found here: {}".format(CLONE_LINK)
         LOGGER.error(error_message)
         exit(1)
     else:
-        LOGGER.info("Pybelt has been updated successfully to {}".format(VERSION))
+        LOGGER.info("kraken has been updated successfully to {}".format(VERSION))
         exit(0)
 
 
@@ -306,7 +306,7 @@ def integrity_check(url=MD5_CHECKSUM_URL):
         LOGGER.fatal(checksum_fail)
         update = prompt("Would you like to update to the latest version[y/N]: ")
         if update.upper().startswith("Y"):
-            update_pybelt()
+            update_kraken()
         else:
             pass
 
