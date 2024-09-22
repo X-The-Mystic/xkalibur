@@ -17,7 +17,7 @@ class HashChecker(object):
             error_message = "Unable to verify hash type "
             error_message += "for hash: '{}'. This could mean ".format(self.hash)
             error_message += "that this is not a valid hash, or that "
-            error_message += "this hash is not supported by Pybelt "
+            error_message += "this hash is not supported by kraken "
             error_message += "yet. If you feel this should be supported "
             error_message += "make an issue regarding this hash."
             LOGGER.error(error_message)
