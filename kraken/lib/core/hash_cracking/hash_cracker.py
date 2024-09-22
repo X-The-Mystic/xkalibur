@@ -46,7 +46,7 @@ class HashCracker(object):
             error_message = "Unable to verify %s against %i different hashes." % (self.hash, len(self.results))
             error_message += " You used algorithm: %s you can attempt all algorithms " % str(self.type).upper()
             error_message += "available on the system by running with 'all' as the hash type. "
-            error_message += "IE: python pybelt.py -c 9a8b1b7eee229046fc2701b228fc2aff:all"
+            error_message += "IE: python kraken.py -c 9a8b1b7eee229046fc2701b228fc2aff:all"
             LOGGER.fatal(error_message)
             exit(1)
 
