@@ -29,7 +29,7 @@ from lib.core.settings import replace_http
 def run_sqli_scan(url, url_file=None, proxy=None, user_agent=False, tamper=None):
     """ Pointer to run a SQLi Scan on a given URL """
     error_message = "URL: '{}' threw an exception {} "
-    error_message += "and Pybelt is unable to resolve the URL, "
+    error_message += "and kraken is unable to resolve the URL, "
     error_message += "this could mean that the URL is not allowing connections "
     error_message += "or that the URL is bad. Attempt to connect "
     error_message += "to the URL manually, if a connection occurs "
@@ -177,7 +177,7 @@ def run_hash_cracker(hash_to_crack, hash_file=None):
             HashCracker(items[0], type=items[1]).try_certain_algorithm()
     except IndexError:
         error_message = "You must specify a hash type in order for this to work. "
-        error_message += "Example: 'python pybelt.py -c 098f6bcd4621d373cade4e832627b4f6:md5'"
+        error_message += "Example: 'python kraken.py -c 098f6bcd4621d373cade4e832627b4f6:md5'"
         LOGGER.fatal(error_message)
 
 
@@ -220,7 +220,7 @@ def run_dork_checker(dork, dork_file=None, proxy=None):
             LOGGER.warning(proxy_warn)
             question = prompt("Would you like to find proxies with the built in finder first[y/N]: ")
             if question.upper().startswith("Y"):
-                subprocess.call(["python", "pybelt.py", "-f"])
+                subprocess.call(["python", "kraken.py", "-f"])
             else:
                 pass
         try:
