@@ -1,8 +1,8 @@
 import re
-import urllib2
+import urllib.request as urllib2
 import socket
 import subprocess
-from urllib2 import HTTPError
+from urllib.request import HTTPError
 from requests.exceptions import ConnectionError
 
 # Libraries
