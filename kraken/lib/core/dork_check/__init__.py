@@ -1,1 +1,1 @@
-from dorks import DorkScanner
+from kraken.lib.core.dork_check import DorkScanner
