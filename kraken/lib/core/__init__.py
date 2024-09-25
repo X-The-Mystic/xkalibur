@@ -1,4 +1,4 @@
-from dork_check import DorkScanner
+from kraken.lib.core.dork_check import DorkScanner
 from settings import create_random_filename
 from settings import RESERVED_PORTS
 from settings import BANNER
