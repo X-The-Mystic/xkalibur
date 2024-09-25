@@ -248,7 +248,7 @@ def decode64(string):
 
 def prompt(question):
     """ Ask a question.. """
-    return raw_input("[{} PROMPT] {}".format(time.strftime("%I:%M:%S"), question))
+    return input("[{} PROMPT] {}".format(time.strftime("%I:%M:%S"), question))
 
 
 def create_wordlist(b64link):

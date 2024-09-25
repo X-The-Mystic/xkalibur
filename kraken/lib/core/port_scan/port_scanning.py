@@ -21,7 +21,7 @@ class PortScanner(object):
             rst = RunScanThread(self.host)
             t2 = threading.Thread(target=rst.run_scan)
             t2.start()
-        except Exception, e:
+        except  Exception as  e:
             LOGGER.error(e)
 
 
@@ -40,8 +40,8 @@ class RunScanThread(PortScanner):
                     LOGGER.info("[*] Open: {}  {}".format(port, RESERVED_PORTS[port]))
                     self.connection_made += "{}, ".format(port)
                 sock.close()
-            except Exception, e:
-                print e
+            except  Exception as  e:
+                print(e)
 
         q = Queue.Queue()
 

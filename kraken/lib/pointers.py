@@ -63,10 +63,10 @@ def run_sqli_scan(url, url_file=None, proxy=None, user_agent=False, tamper=None)
                             LOGGER.warn("URL '{}' does not contain a query (GET) parameter, skipping..".format(url.strip()))
                             pass
             LOGGER.info("No more URLS found in file, shutting down..")
-        except HTTPError as e:
+        except  HTTPError as  e:
             LOGGER.fatal(error_message.format(url.strip(), e))
-        except IOError as e:
-            print e
+        except  IOError as  e:
+            print(e)
             LOGGER.fatal("That file does not exist, verify path and try again.")
 
     else:  # Run a single URL
@@ -76,7 +76,7 @@ def run_sqli_scan(url, url_file=None, proxy=None, user_agent=False, tamper=None)
                 LOGGER.info(SQLiScanner(url).sqli_search())
             else:
                 LOGGER.error("URL does not contain a query (GET) parameter. Example: http://example.com/php?id=2")
-        except HTTPError as e:
+        except  HTTPError as  e:
             LOGGER.fatal(error_message.format(url, e))
 
 

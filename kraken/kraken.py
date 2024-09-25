@@ -116,7 +116,7 @@ if __name__ == '__main__':
             info_message += "to exit the console type: 'quit'"
             try:
                 prompt.cmdloop(LOGGER.info(info_message))
-            except TypeError as e:
+            except  TypeError as  e:
                 LOGGER.info("Terminating session...")
                 exit(0)
 

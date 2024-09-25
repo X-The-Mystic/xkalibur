@@ -110,5 +110,5 @@ class AttackMethod:
             # Wait all threads for stop
             for thread in self.threads:
                 thread.join()
-        except Exception as err:
+        except  Exception as  err:
             print(err)

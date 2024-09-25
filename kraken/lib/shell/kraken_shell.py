@@ -48,17 +48,17 @@ class krakenConsole(Cmd):
             )))
         elif command.lower() == "-s" or command.lower().startswith("sqli"):
             from lib.pointers import run_sqli_scan
-            host = raw_input("Enter a host to scan for SQLi vulnerabilities: ")
+            host = input("Enter a host to scan for SQLi vulnerabilities: ")
             run_sqli_scan(host)
         elif command.lower() == "-d" or command.lower().startswith("dork"):
             from lib.pointers import run_dork_checker
-            dork = raw_input("Enter a dork to scan with: ")
+            dork = input("Enter a dork to scan with: ")
             run_dork_checker(dork)
         elif command.lower() == "-x" or command.lower().startswith("xss"):
             from lib.pointers import run_xss_scan
-            host = raw_input("Enter a host to check XSS vulnerabilities on: ")
-            proxy = raw_input("Enter a proxy to user (enter for none): ")
-            user_agent = raw_input("Enter a user agent to spoof (enter for none): ")
+            host = input("Enter a host to check XSS vulnerabilities on: ")
+            proxy = input("Enter a proxy to user (enter for none): ")
+            user_agent = input("Enter a user agent to spoof (enter for none): ")
             if proxy == "":
                 proxy = None
             if user_agent == "":
@@ -66,19 +66,19 @@ class krakenConsole(Cmd):
             run_xss_scan(host, proxy=proxy, user_agent=user_agent)
         elif command.lower() == "-v" or command.lower().startswith("verify"):
             from lib.pointers import run_hash_verification
-            h = raw_input("Enter a hash to verify: ")
+            h = input("Enter a hash to verify: ")
             run_hash_verification(h)
         elif command.lower() == "-h" or command.lower().startswith("crack"):
             from lib.pointers import run_hash_cracker
-            h = raw_input("Enter a hash to crack: ")
-            t = raw_input("Enter what type (all for none): ")
+            h = input("Enter a hash to crack: ")
+            t = input("Enter what type (all for none): ")
             if t is None or t == "":
                 t = "all"
             full_data = h + ":" + t
             run_hash_cracker(full_data)
         elif command.lower() == "-p" or command.lower().startswith("port"):
             from lib.pointers import run_port_scan
-            host = raw_input("Enter a host to scan open ports on: ")
+            host = input("Enter a host to scan open ports on: ")
             run_port_scan(host)
         elif command.lower() == "-f" or command.lower().startswith("proxy"):
             from lib.pointers import run_proxy_finder
@@ -89,20 +89,20 @@ class krakenConsole(Cmd):
             update_kraken()
         elif command.lower() == "-sl" or command.lower().startswith("sql list"):
             from lib.pointers import run_sqli_scan
-            file_path = raw_input("Enter the full path to the SQLi file: ")
+            file_path = input("Enter the full path to the SQLi file: ")
             run_sqli_scan(None, url_file=file_path)
         elif command.lower() == "-xl" or command.lower().startswith("xss file"):
             from lib.pointers import run_xss_scan
-            file_path = raw_input("Enter the full path to the XSS file: ")
+            file_path = input("Enter the full path to the XSS file: ")
             run_xss_scan(None, url_file=file_path)
         elif command.lower() == "-vhl" or command.lower().startswith("verify hash list"):
             from lib.pointers import run_hash_verification
-            hash_file = raw_input("Enter full path of hash file: ")
+            hash_file = input("Enter full path of hash file: ")
             run_hash_verification(None, hash_file)
         elif command.lower == "-dl" or command.lower().startswith("dork list"):
             from lib.pointers import run_dork_checker
-            dork_file_path = raw_input("Enter full path to dork file: ")
-            proxy = raw_input("Enter a proxy (enter for none): ")
+            dork_file_path = input("Enter full path to dork file: ")
+            proxy = input("Enter a proxy (enter for none): ")
             if proxy is "":
                 proxy = None
             else:
