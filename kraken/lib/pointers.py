@@ -1,5 +1,6 @@
 import re
 import urllib.request as urllib2
+import logging 
 import socket
 import subprocess
 from urllib.request import HTTPError

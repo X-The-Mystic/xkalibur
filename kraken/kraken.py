@@ -10,9 +10,9 @@ from lib.pointers import run_proxy_finder
 from lib.pointers import run_xss_scan
 from lib.pointers import run_sqli_scan
 from lib.pointers import run_dork_checker
-from lib.pointers import run_hash_cracker
+# from lib.pointers import run_hash_cracker
 from lib.pointers import run_hash_verification
-from lib.pointers import run_port_scan
+#from lib.pointers import run_port_scan
 
 # Shell
 from lib.shell import kraken_shell
