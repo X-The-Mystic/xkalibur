@@ -1,2 +1,0 @@
-class GoogleBlockException(Exception):
-    pass
