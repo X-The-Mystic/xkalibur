@@ -1,9 +1,15 @@
+import sys
+import os
+
+print("Python verison:", sys.version)
+print("Current working directory:", os.getcwd())
+print("Python executable:", sys.executable)
+print("PYTHONPATH:", os.environ.get('PYTHONPATH', ''))
+
 # Date: 09/01/2018
 # Author: Pure-L0G1C
 # Description: Execute creator
 
-import os  
-import sys 
 import shlex 
 import shutil
 import smtplib 
